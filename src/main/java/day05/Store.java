@@ -28,9 +28,9 @@ public class Store {
         }
     }
 
-    public void write(List<String> products){
+    public void write(){
         try {
-            Files.write(Path.of("products.txt"), products);
+            Files.write(Path.of("products.txt"), findTheProducts(Month.NOVEMBER));
         } catch (IOException e){
             throw new IllegalArgumentException("no write", e);
         }
